@@ -7,10 +7,10 @@ defmodule PortalTest do
   end
 
   test "transfer: push data into left struct" do
-    Portal.shoot(:orange)
+    Portal.shoot(:brown)
     Portal.shoot(:green)
-    Portal.transfer(:orange, :green, [1])
-    assert Portal.Door.get(:orange) == [1]
+    Portal.transfer(:brown, :green, [1])
+    assert Portal.Door.get(:brown) == [1]
     assert Portal.Door.get(:green) == []
   end
 
