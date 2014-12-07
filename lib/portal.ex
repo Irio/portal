@@ -54,9 +54,6 @@ defmodule Portal do
     push(portal, portal.left, portal.right)
   end
 
-  @doc """
-  Pushes data between sides of the given `portal`.
-  """
   defp push(portal, origin_portal, destination_portal) do
     # See if we can pop data. If so, push the popped data
     # to the destination side. Otherwise, do nothing.
