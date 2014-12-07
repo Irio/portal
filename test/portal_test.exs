@@ -10,8 +10,8 @@ defmodule PortalTest do
     Portal.shoot(:brown)
     Portal.shoot(:green)
     Portal.transfer(:brown, :green, [1])
-    assert Portal.Door.get(:brown) == [1]
-    assert Portal.Door.get(:green) == []
+    assert [1] == Portal.Door.get(:brown)
+    assert [] == Portal.Door.get(:green)
   end
 
   test "push_right: push head of left into right struct" do
@@ -19,8 +19,8 @@ defmodule PortalTest do
     Portal.shoot(:blue)
     portal = Portal.transfer(:orange, :blue, [1])
     Portal.push_right(portal)
-    assert Portal.Door.get(:orange) == []
-    assert Portal.Door.get(:blue) == [1]
+    assert [] == Portal.Door.get(:orange)
+    assert [1] == Portal.Door.get(:blue)
   end
 
   test "push_left: push head of right into left struct" do
@@ -29,7 +29,7 @@ defmodule PortalTest do
     portal = Portal.transfer(:yellow, :magenta, [])
     Portal.Door.push(:magenta, 3)
     Portal.push_left(portal)
-    assert Portal.Door.get(:yellow) == [3]
-    assert Portal.Door.get(:magenta) == []
+    assert [3] == Portal.Door.get(:yellow)
+    assert [] == Portal.Door.get(:magenta)
   end
 end
