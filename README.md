@@ -4,10 +4,11 @@ A project to simulate [Portal](http://en.wikipedia.org/wiki/Portal_(video_game))
 
 ## Setup
 
-Install Elixir.
+Install Elixir and fetch dependencies.
 
 ```console
 $ brew install elixir
+$ mix deps.get
 ```
 
 ## Running
