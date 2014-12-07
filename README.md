@@ -108,7 +108,7 @@ The test suite ExUnit and is available via Mix Task.
 $ mix test
 ```
 
-If you change any docs, make sure to `$ mix docs` and also commit the HTML documentation.
+For generating HTML docs, use `$ mix docs` mix task. They will be created under `docs` folder.
 
 ## Inspiration
 
