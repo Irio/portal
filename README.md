@@ -100,11 +100,15 @@ iex(room1@MacBook-Air-de-Irio)5> Portal.Door.get(blue)
 [4]
 ```
 
-## Testing
+## Development
+
+The test suite ExUnit and is available via Mix Task.
 
 ```console
 $ mix test
 ```
+
+If you change any docs, make sure to `$ mix docs` and also commit the HTML documentation.
 
 ## Inspiration
 
