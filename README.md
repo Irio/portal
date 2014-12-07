@@ -2,6 +2,14 @@
 
 A project to simulate [Portal](http://en.wikipedia.org/wiki/Portal_(video_game)) behaviour in Elixir. The transferred data are elements from a List. State is kept via [Agents API](http://elixir-lang.org/docs/stable/elixir/Agent.html) - accessible via multiple processes - backed up by [Supervisors](http://elixir-lang.org/docs/stable/elixir/Supervisor.html), responsible to restart processes of portals if something happen with them.
 
+## Setup
+
+Install Elixir.
+
+```console
+$ brew install elixir
+```
+
 ## Running
 
 ### Experience supervisors in action
@@ -89,6 +97,12 @@ iex(room1@MacBook-Air-de-Irio)4> Portal.Door.get(orange)
 [3, 2, 1]
 iex(room1@MacBook-Air-de-Irio)5> Portal.Door.get(blue)
 [4]
+```
+
+## Testing
+
+```console
+$ mix test
 ```
 
 ## Inspiration
